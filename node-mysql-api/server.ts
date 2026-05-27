@@ -12,6 +12,12 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(cookieParser());
 
+console.log('=== ENVIRONMENT VARIABLES ===');
+console.log('CORS_ORIGIN:', process.env.CORS_ORIGIN);
+console.log('NODE_ENV:', process.env.NODE_ENV);
+console.log('PORT:', process.env.PORT);
+console.log('=============================');
+
 // allow cors requests from any origin and with credentials
 app.use(cors({ 
     origin: process.env.CORS_ORIGIN, 
